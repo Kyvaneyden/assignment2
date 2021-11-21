@@ -34,19 +34,20 @@ function cleanUpView() {
 function renderView() {
   let view = document.querySelectorAll(".main");
   for (i = 0; contact.length > i; i++) {
-    let contact = createSingleIndex(contactinfo[i]);
+    let contact = createSingleIndex(contactList[i]);
     view.appendChild(contact);
+  }
 }
 
-cleanUpCreate()
+function cleanUpCreate() {
+  const contactedit = document.getElementsByClassName("contactedit");
+  removeAllChildNodes(contactedit);
+}
 
-renderCreate()
-
-/*
-- Create a function called renderCreate that creates all of the DOM nodes that are 
-unique to the Create page. This function will take in a single parameter, which is 
-an object that represents a single contact. Much like renderIndex, this function is 
-reponsible for actually modifying the web page.
-
-- write the page in javascript and index an object to add information while you do it
-*/
+function renderCreate() {
+  let view = document.querySelectorAll(".main");
+  for (i = 0; contact.length > i; i++) {
+    let contact = createSingleIndex(contactList[i]);
+    view.appendChild(contact);
+  }
+}
